@@ -4,19 +4,31 @@ A React Native color picker component that uses native UI components for both iO
 
 ## Features
 
--   Native color picker UI for both iOS and Android
--   Support for hex, RGBA, and RGB color formats
--   Alpha channel support (optional)
--   Promise-based API
--   TypeScript support
--   Color format conversion utilities
+- Native color picker UI for both iOS and Android
+- Support for hex, RGBA, and RGB color formats
+- Alpha channel support (optional)
+- Promise-based API
+- TypeScript support
+- Color format conversion utilities
 
 ## Installation
 
+Add the package to your `package.json`:
+
+```json
+{
+  "dependencies": {
+    "react-native-color-picker": "SlayApp/react-native-color-picker"
+  }
+}
+```
+
+Then install dependencies:
+
 ```bash
-npm install react-native-color-picker
+npm install
 # or
-yarn add react-native-color-picker
+yarn install
 ```
 
 ### iOS
@@ -30,35 +42,35 @@ cd ios && pod install && cd ..
 ## Usage
 
 ```typescript
-import ColorPicker from 'react-native-color-picker'
+import ColorPicker from "react-native-color-picker";
 
 // Basic usage
 try {
-	const color = await ColorPicker.show({
-		color: '#FF0000', // Initial color
-		supportsAlpha: true, // Enable alpha channel
-		title: 'Select a Color', // Android only
-	})
-	console.log('Selected color:', color)
+  const color = await ColorPicker.show({
+    color: "#FF0000", // Initial color
+    supportsAlpha: true, // Enable alpha channel
+    title: "Select a Color", // Android only
+  });
+  console.log("Selected color:", color);
 } catch (error) {
-	console.log('Color picker dismissed')
+  console.log("Color picker dismissed");
 }
 
 // Using callbacks
 ColorPicker.show({
-	color: 'rgba(255, 0, 0, 0.5)',
-	onColorSelected: color => {
-		console.log('Selected color:', color)
-	},
-	onDismissed: () => {
-		console.log('Color picker dismissed')
-	},
-})
+  color: "rgba(255, 0, 0, 0.5)",
+  onColorSelected: (color) => {
+    console.log("Selected color:", color);
+  },
+  onDismissed: () => {
+    console.log("Color picker dismissed");
+  },
+});
 
 // Color format conversion
-const hexColor = ColorPicker.toHex('rgba(255, 0, 0, 0.5)')
-const rgbaColor = ColorPicker.toRgba('#FF0000')
-const colorObject = ColorPicker.toObject('rgba(255, 0, 0, 0.5)')
+const hexColor = ColorPicker.toHex("rgba(255, 0, 0, 0.5)");
+const rgbaColor = ColorPicker.toRgba("#FF0000");
+const colorObject = ColorPicker.toObject("rgba(255, 0, 0, 0.5)");
 ```
 
 ## API
