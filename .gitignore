@@ -1,0 +1,65 @@
+# Node modules
+node_modules/
+
+# macOS
+.DS_Store
+
+# npm / Yarn / Bun logs and lockfiles
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+bun.lockb
+package-lock.json
+yarn.lock
+
+# TypeScript
+*.tsbuildinfo
+
+# Babel
+.cache/
+babel.config.js
+
+# Watchman
+.watchmanconfig
+
+# Metro
+.expo/
+.expo-shared/
+logs/
+*.expo
+*.map
+
+# Android
+android/.gradle/
+android/.idea/
+android/.cxx/
+android/local.properties
+android/app/build/
+android/build/
+android/.DS_Store
+*.iml
+*.apk
+*.ap_
+*.dex
+
+# Android NDK
+obj/
+
+# iOS
+ios/Pods/
+ios/build/
+ios/DerivedData/
+ios/.DS_Store
+*.xcworkspace
+*.xcuserstate
+*.xcodeproj/project.xcworkspace/xcuserdata/
+
+# Xcode user data
+ios/*.xcodeproj/xcuserdata/
+ios/*.xcworkspace/xcuserdata/
+
+# CocoaPods
+ios/Podfile.lock
+ios/Pods/

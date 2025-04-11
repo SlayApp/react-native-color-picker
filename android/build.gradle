@@ -1,0 +1,44 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.0.2")
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'com.facebook.react'
+
+android {
+    namespace "com.reactnative.colorpicker"
+    compileSdk 33
+    
+    defaultConfig {
+        minSdk 21
+        targetSdk 33
+    }
+    
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+repositories {
+    google()
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'com.facebook.react:react-android'
+    implementation 'com.github.dhaval2404:colorpicker:2.3'
+}
