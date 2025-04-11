@@ -1,20 +1,28 @@
 {
-	"name": "react-native-color-picker",
-	"version": "1.0.0",
-	"description": "React Native color picker with native UI components",
-	"main": "index.js",
-	"types": "index.d.ts",
-	"typings": "index.d.ts",
-	"author": "Jannis Ringwald",
-	"license": "MIT",
-	"peerDependencies": {
-		"react": "*",
-		"react-native": "*"
-	},
-	"files": [
-		"index.js",
-		"index.d.ts",
-		"*.ts",
-		"*.tsx"
-	]
+  "name": "react-native-color-picker",
+  "version": "1.0.0",
+  "description": "React Native color picker with native UI components",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "typings": "index.d.ts",
+  "author": "Jannis Ringwald",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "files": [
+    "android/",
+    "ios/",
+    "react-native-color-picker.podspec",
+    "index.js",
+    "index.d.ts",
+    "index.tsx",
+    "index.types.ts",
+    "ColorPickerModule.d.ts",
+    "ColorPickerModule.js",
+    "NativeColorPicker.js",
+    "NativeColorPicker.ts",
+    "README.md"
+  ]
 }
